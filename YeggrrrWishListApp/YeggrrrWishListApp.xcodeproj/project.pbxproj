@@ -1,0 +1,439 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		68DB35D62BCD739400265A2F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DB35D52BCD739400265A2F /* NetworkManager.swift */; };
+		68DB35D82BCD73AF00265A2F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DB35D72BCD73AF00265A2F /* CoreDataManager.swift */; };
+		68FCD6EC2BC535A700368384 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FCD6EB2BC535A700368384 /* AppDelegate.swift */; };
+		68FCD6EE2BC535A700368384 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FCD6ED2BC535A700368384 /* SceneDelegate.swift */; };
+		68FCD6F02BC535A700368384 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FCD6EF2BC535A700368384 /* ViewController.swift */; };
+		68FCD6F32BC535A700368384 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 68FCD6F22BC535A700368384 /* Base */; };
+		68FCD6F62BC535A700368384 /* YeggrrrWishListApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 68FCD6F42BC535A700368384 /* YeggrrrWishListApp.xcdatamodeld */; };
+		68FCD6F82BC535A800368384 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68FCD6F72BC535A800368384 /* Assets.xcassets */; };
+		68FCD6FB2BC535A800368384 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 68FCD6FA2BC535A800368384 /* Base */; };
+		68FCD7042BC542F600368384 /* RemoteProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FCD7032BC542F600368384 /* RemoteProduct.swift */; };
+		68FCD7072BC54FFB00368384 /* WishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FCD7062BC54FFB00368384 /* WishListViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		68DB35D52BCD739400265A2F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		68DB35D72BCD73AF00265A2F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		68FCD6E82BC535A700368384 /* YeggrrrWishListApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YeggrrrWishListApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		68FCD6EB2BC535A700368384 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		68FCD6ED2BC535A700368384 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		68FCD6EF2BC535A700368384 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		68FCD6F22BC535A700368384 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		68FCD6F52BC535A700368384 /* YeggrrrWishListApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = YeggrrrWishListApp.xcdatamodel; sourceTree = "<group>"; };
+		68FCD6F72BC535A800368384 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		68FCD6FA2BC535A800368384 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		68FCD6FC2BC535A800368384 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68FCD7032BC542F600368384 /* RemoteProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteProduct.swift; sourceTree = "<group>"; };
+		68FCD7062BC54FFB00368384 /* WishListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		68FCD6E52BC535A700368384 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		68DB35D42BCD736600265A2F /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				68DB35D52BCD739400265A2F /* NetworkManager.swift */,
+				68DB35D72BCD73AF00265A2F /* CoreDataManager.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		68FCD6DF2BC535A700368384 = {
+			isa = PBXGroup;
+			children = (
+				68FCD6EA2BC535A700368384 /* YeggrrrWishListApp */,
+				68FCD6E92BC535A700368384 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		68FCD6E92BC535A700368384 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				68FCD6E82BC535A700368384 /* YeggrrrWishListApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		68FCD6EA2BC535A700368384 /* YeggrrrWishListApp */ = {
+			isa = PBXGroup;
+			children = (
+				68FCD6EB2BC535A700368384 /* AppDelegate.swift */,
+				68FCD6ED2BC535A700368384 /* SceneDelegate.swift */,
+				68FCD7082BC558E100368384 /* Resources */,
+				68FCD7092BC5597000368384 /* Sources */,
+				68FCD6F92BC535A800368384 /* LaunchScreen.storyboard */,
+				68FCD6FC2BC535A800368384 /* Info.plist */,
+				68FCD6F42BC535A700368384 /* YeggrrrWishListApp.xcdatamodeld */,
+			);
+			path = YeggrrrWishListApp;
+			sourceTree = "<group>";
+		};
+		68FCD7022BC542D400368384 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				68FCD7032BC542F600368384 /* RemoteProduct.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		68FCD7052BC54A2D00368384 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				68FCD6EF2BC535A700368384 /* ViewController.swift */,
+				68FCD7062BC54FFB00368384 /* WishListViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		68FCD7082BC558E100368384 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				68FCD6F12BC535A700368384 /* Main.storyboard */,
+				68FCD6F72BC535A800368384 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		68FCD7092BC5597000368384 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				68DB35D42BCD736600265A2F /* Helper */,
+				68FCD7052BC54A2D00368384 /* Controller */,
+				68FCD7022BC542D400368384 /* Model */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		68FCD6E72BC535A700368384 /* YeggrrrWishListApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 68FCD6FF2BC535A800368384 /* Build configuration list for PBXNativeTarget "YeggrrrWishListApp" */;
+			buildPhases = (
+				68FCD6E42BC535A700368384 /* Sources */,
+				68FCD6E52BC535A700368384 /* Frameworks */,
+				68FCD6E62BC535A700368384 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YeggrrrWishListApp;
+			productName = YeggrrrWishListApp;
+			productReference = 68FCD6E82BC535A700368384 /* YeggrrrWishListApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		68FCD6E02BC535A700368384 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					68FCD6E72BC535A700368384 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+				};
+			};
+			buildConfigurationList = 68FCD6E32BC535A700368384 /* Build configuration list for PBXProject "YeggrrrWishListApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 68FCD6DF2BC535A700368384;
+			productRefGroup = 68FCD6E92BC535A700368384 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				68FCD6E72BC535A700368384 /* YeggrrrWishListApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		68FCD6E62BC535A700368384 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68FCD6F82BC535A800368384 /* Assets.xcassets in Resources */,
+				68FCD6FB2BC535A800368384 /* Base in Resources */,
+				68FCD6F32BC535A700368384 /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		68FCD6E42BC535A700368384 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68FCD6F02BC535A700368384 /* ViewController.swift in Sources */,
+				68DB35D62BCD739400265A2F /* NetworkManager.swift in Sources */,
+				68FCD7072BC54FFB00368384 /* WishListViewController.swift in Sources */,
+				68FCD6F62BC535A700368384 /* YeggrrrWishListApp.xcdatamodeld in Sources */,
+				68FCD6EC2BC535A700368384 /* AppDelegate.swift in Sources */,
+				68FCD6EE2BC535A700368384 /* SceneDelegate.swift in Sources */,
+				68DB35D82BCD73AF00265A2F /* CoreDataManager.swift in Sources */,
+				68FCD7042BC542F600368384 /* RemoteProduct.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		68FCD6F12BC535A700368384 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				68FCD6F22BC535A700368384 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		68FCD6F92BC535A800368384 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				68FCD6FA2BC535A800368384 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		68FCD6FD2BC535A800368384 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		68FCD6FE2BC535A800368384 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		68FCD7002BC535A800368384 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = YeggrrrWishListApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = YJ.YeggrrrWishListApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		68FCD7012BC535A800368384 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = YeggrrrWishListApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = YJ.YeggrrrWishListApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		68FCD6E32BC535A700368384 /* Build configuration list for PBXProject "YeggrrrWishListApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68FCD6FD2BC535A800368384 /* Debug */,
+				68FCD6FE2BC535A800368384 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		68FCD6FF2BC535A800368384 /* Build configuration list for PBXNativeTarget "YeggrrrWishListApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68FCD7002BC535A800368384 /* Debug */,
+				68FCD7012BC535A800368384 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		68FCD6F42BC535A700368384 /* YeggrrrWishListApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				68FCD6F52BC535A700368384 /* YeggrrrWishListApp.xcdatamodel */,
+			);
+			currentVersion = 68FCD6F52BC535A700368384 /* YeggrrrWishListApp.xcdatamodel */;
+			path = YeggrrrWishListApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 68FCD6E02BC535A700368384 /* Project object */;
+}
