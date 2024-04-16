@@ -19,17 +19,12 @@ class WishListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.dataSource = self
-        setProductList()
+        let fetchedData = CoreDataManager.fetch()
+        productList = fetchedData
     }
     
-    private func setProductList() {
-        guard let context = self.persistentContainer?.viewContext else { return }
-        
-        let request = Product.fetchRequest()
-        
-        if let productList = try? context.fetch(request) {
-            self.productList = productList
-        }
+    override func  tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -37,15 +32,19 @@ class WishListViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "WishListCell", for: indexPath)
-        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "WishListCell", for: indexPath) as? WishListCell else { return UITableViewCell() }
         let product = self.productList[indexPath.row]
-        
-        let id = product.id
-        let title = product.title ?? ""
-        let price = product.price
-        
-        cell.textLabel?.text = "- [\(title)][\(id)] - \(price)$"
+        NetworkManager.fetchProductImage(id: product.id) { image in
+            DispatchQueue.main.async {
+                cell.productImageView.image = image
+            }
+        }
+        cell.titleLabel.text = "[No. \(product.id)]\n\(product.title ?? "-")"
+        cell.subTitleLabel.text = "$ \(product.price)"
+        cell.titleLabel.font = .systemFont(ofSize: 17, weight: .semibold)
+        cell.titleLabel.numberOfLines = 3
+        cell.subTitleLabel.textColor = .red
+        cell.productImageView.contentMode = .scaleAspectFill
         return cell
     }
     
@@ -55,34 +54,12 @@ class WishListViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+            // 원하는 상품 셀에서 삭제
+            let productPrimaryKey = productList[indexPath.row].primaryKey
+            CoreDataManager.delete(primaryKey: productPrimaryKey)
+            // 데이터에서 삭제
             productList.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-            print(productList[indexPath.row])
-            
-            if let productPrimaryKey = productList[indexPath.row].primaryKey {
-                deleteData(primaryKey: productPrimaryKey)
-            }
-        }
-    }
-    
-    func deleteData(primaryKey: UUID) {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
-        
-        let managedContext = appDelegate.persistentContainer.viewContext
-        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest.init(entityName: "Product")
-        fetchRequest.predicate = NSPredicate(format: "primaryKey = %@", primaryKey.uuidString) // "\(primaryKey)"
-        
-        do {
-            let test = try managedContext.fetch(fetchRequest)
-            let objectToDelete = test[0] as! NSManagedObject
-            managedContext.delete(objectToDelete)
-            do {
-                try managedContext.save()
-            } catch {
-                print(error)
-            }
-        } catch {
-            print(error)
         }
     }
 }

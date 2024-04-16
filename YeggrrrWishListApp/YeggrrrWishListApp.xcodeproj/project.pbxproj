@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		68DB35D62BCD739400265A2F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DB35D52BCD739400265A2F /* NetworkManager.swift */; };
 		68DB35D82BCD73AF00265A2F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DB35D72BCD73AF00265A2F /* CoreDataManager.swift */; };
+		68DB35DA2BCD8B6900265A2F /* WishListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DB35D92BCD8B6900265A2F /* WishListCell.swift */; };
 		68FCD6EC2BC535A700368384 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FCD6EB2BC535A700368384 /* AppDelegate.swift */; };
 		68FCD6EE2BC535A700368384 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FCD6ED2BC535A700368384 /* SceneDelegate.swift */; };
 		68FCD6F02BC535A700368384 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FCD6EF2BC535A700368384 /* ViewController.swift */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		68DB35D52BCD739400265A2F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		68DB35D72BCD73AF00265A2F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		68DB35D92BCD8B6900265A2F /* WishListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListCell.swift; sourceTree = "<group>"; };
 		68FCD6E82BC535A700368384 /* YeggrrrWishListApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YeggrrrWishListApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68FCD6EB2BC535A700368384 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		68FCD6ED2BC535A700368384 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			children = (
 				68FCD6EF2BC535A700368384 /* ViewController.swift */,
 				68FCD7062BC54FFB00368384 /* WishListViewController.swift */,
+				68DB35D92BCD8B6900265A2F /* WishListCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				68FCD6F02BC535A700368384 /* ViewController.swift in Sources */,
+				68DB35DA2BCD8B6900265A2F /* WishListCell.swift in Sources */,
 				68DB35D62BCD739400265A2F /* NetworkManager.swift in Sources */,
 				68FCD7072BC54FFB00368384 /* WishListViewController.swift in Sources */,
 				68FCD6F62BC535A700368384 /* YeggrrrWishListApp.xcdatamodeld in Sources */,
