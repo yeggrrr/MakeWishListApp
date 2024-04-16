@@ -9,7 +9,7 @@ import UIKit
 import CoreData
 
 class ViewController: UIViewController {
-    // currentProduct가 set되면, imageView, titleLabel, descriptionLable, priceLabel 각각 적절한 값 지정
+    // currentProduct가 set되면, imageView, titleLabel, descriptionLabel, priceLabel 각각 적절한 값 지정
     private var currentProduct: RemoteProduct? = nil {
         didSet {
             // currentProduct가 nil이 아닌 경우를 가져와야하므로, guard let으로 바인딩해주기
@@ -31,6 +31,7 @@ class ViewController: UIViewController {
         }
     }
 
+    @IBOutlet weak var containerScrollView: UIScrollView!
     @IBOutlet weak var productImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -45,8 +46,20 @@ class ViewController: UIViewController {
         NetworkManager.fetchRemoteProduct { product in
             self.currentProduct = product
         }
-        
+        configureRefreshControl()
         buttonLayout()
+    }
+    
+    func configureRefreshControl() {
+        containerScrollView.refreshControl = UIRefreshControl()
+        containerScrollView.refreshControl?.addTarget(self, action: #selector(handleRefreshControl), for: .valueChanged)
+    }
+    
+    @objc func handleRefreshControl() {
+        updateProduct()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.containerScrollView.refreshControl?.endRefreshing()
+        }
     }
     
     func buttonLayout() {
@@ -59,8 +72,7 @@ class ViewController: UIViewController {
         
     }
     
-    // 다른 상품 보기 버튼 클릭
-    @IBAction func tappedAnotherProductButton(_ sender: UIButton) {
+    func updateProduct() {
         presentAnotherProductButton.isEnabled = false
         NetworkManager.fetchRemoteProduct { product in
             self.currentProduct = product
@@ -69,6 +81,11 @@ class ViewController: UIViewController {
                 self.presentAnotherProductButton.isEnabled = true
             }
         }
+    }
+    
+    // 다른 상품 보기 버튼 클릭
+    @IBAction func tappedAnotherProductButton(_ sender: UIButton) {
+        updateProduct()
     }
     // 위시 리스트 담기 버튼 클릭
     @IBAction func tappedSaveWishListButton(_ sender: UIButton) {
@@ -85,8 +102,8 @@ class ViewController: UIViewController {
         alert.addAction(cancelButton)
         self.present(alert, animated: true)
     }
-    // 위시 리스트 보기 버튼 클릭
     
+    // 위시 리스트 보기 버튼 클릭
     @IBAction func tappedPresentWishListButton(_ sender: UIButton) {
         // WishListViewController 가져오기
         guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "WishListViewController") as? WishListViewController else { return }
