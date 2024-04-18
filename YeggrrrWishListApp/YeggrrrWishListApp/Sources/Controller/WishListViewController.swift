@@ -39,6 +39,7 @@ class WishListViewController: UITableViewController {
                 cell.productImageView.image = image
             }
         }
+        
         cell.titleLabel.text = "[No. \(product.id)]\n\(product.title ?? "-")"
         cell.subTitleLabel.text = "$ \(product.price)"
         cell.titleLabel.font = .systemFont(ofSize: 17, weight: .semibold)

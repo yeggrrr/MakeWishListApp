@@ -46,7 +46,7 @@ class CoreDataManager {
         
         let managedContext = appDelegate.persistentContainer.viewContext
         let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest.init(entityName: "Product")
-        fetchRequest.predicate = NSPredicate(format: "primaryKey = %@", primaryKey.uuidString) // "\(primaryKey)"
+        fetchRequest.predicate = NSPredicate(format: "primaryKey = %@", primaryKey.uuidString)
         
         do {
             let test = try managedContext.fetch(fetchRequest)

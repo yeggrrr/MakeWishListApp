@@ -46,8 +46,9 @@ class ViewController: UIViewController {
         NetworkManager.fetchRemoteProduct { product in
             self.currentProduct = product
         }
+        
         configureRefreshControl()
-        buttonLayout()
+        configureUI()
     }
     
     func configureRefreshControl() {
@@ -62,14 +63,13 @@ class ViewController: UIViewController {
         }
     }
     
-    func buttonLayout() {
+    func configureUI() {
         saveWishListButton.layer.cornerRadius = 15
         presentAnotherProductButton.layer.cornerRadius = 15
         presentWishListButton.layer.cornerRadius = 15
         titleLabel.font = .systemFont(ofSize: 27, weight: .bold)
         descriptionLabel.textColor = .darkGray
         priceLabel.font = .systemFont(ofSize: 16, weight: .bold)
-        
     }
     
     func updateProduct() {
